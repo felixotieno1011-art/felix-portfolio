@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felix Otieno — Security Engineer</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #fdf8ef;
+    color: #1a1a1a;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  a { color: #8a6508; text-decoration: none; transition: color 0.2s; }
+  a:hover { color: #1a1a1a; text-decoration: underline; }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 60px 24px; }
+
+  /* HERO */
+  .hero { padding-top: 40px; padding-bottom: 20px; }
+  .hero h1 { font-size: 52px; margin-bottom: 16px; letter-spacing: -1.5px; line-height: 1.1; color: #1a1a1a; }
+  .hero .tagline { font-size: 22px; color: #5a4a1f; margin-bottom: 32px; max-width: 650px; }
+  
+  .hero .cta {
+    display: inline-block; 
+    background: #1a1a1a; 
+    color: #fdf8ef;
+    padding: 14px 28px; 
+    border-radius: 6px; 
+    font-weight: 700;
+    font-size: 16px;
+    transition: background 0.2s;
+  }
+  .hero .cta:hover { background: #333333; text-decoration: none; color: #ffffff; }
+
+  /* SECTION */
+  section { margin-top: 80px; }
+  section h2 {
+    font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+    color: #b8860b; margin-bottom: 24px; font-weight: 700;
+    border-bottom: 1px solid #e8dcc0; padding-bottom: 8px;
+  }
+
+  /* ABOUT */
+  .about p { font-size: 18px; color: #2a2a2a; max-width: 750px; margin-bottom: 16px; }
+  .about p:last-child { margin-bottom: 0; }
+
+  /* PROJECTS */
+  .projects { display: grid; gap: 20px; }
+  .card {
+    background: #ffffff; border: 1px solid #e8dcc0; border-radius: 8px;
+    padding: 24px; transition: border-color 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(184, 134, 11, 0.06);
+  }
+  .card:hover { border-color: #b8860b; transform: translateY(-2px); }
+  .card h3 { font-size: 20px; margin-bottom: 8px; color: #1a1a1a; }
+  .card p { color: #4a4a4a; font-size: 15px; margin-bottom: 16px; }
+  
+  .card .stack { font-size: 13px; margin-bottom: 16px; }
+  .card .stack span {
+    display: inline-block; background: #fdf8ef; border: 1px solid #e8dcc0;
+    padding: 2px 10px; border-radius: 4px; margin-right: 6px; margin-bottom: 6px;
+    color: #5a4a1f;
+  }
+  
+  .card .links a { font-size: 14px; font-weight: 700; letter-spacing: 0.5px; }
+
+  /* CONTACT */
+  .contact { display: flex; flex-direction: column; gap: 16px; font-size: 18px; }
+  .contact .label { color: #8a7a5a; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 4px; }
+
+  /* FOOTER */
+  footer {
+    margin-top: 100px; padding-top: 24px; border-top: 1px solid #e8dcc0;
+    text-align: center; color: #8a7a5a; font-size: 13px;
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 40px; }
+    .hero .tagline { font-size: 18px; }
+    section { margin-top: 60px; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="hero" id="top">
+      <h1>Felix Otieno</h1>
+      <p class="tagline">I build secure systems, break them ethically, and prove it in writing.</p>
+      <a href="#projects" class="cta">See my work →</a>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about">
+      <h2>About</h2>
+      <p>
+        Security engineer and backend developer based in Nairobi. I design and build full-stack security infrastructure — from zero-trust API gateways and infrastructure-as-code honeypot pipelines, to real-time SIEM dashboards and AI-driven threat analysis tools.
+      </p>
+      <p>
+        I don't just write code; I build systems, secure them, attempt to break them, and document the entire process. Every project in this portfolio was engineered from scratch on a mobile device, proving that resilience and deep technical execution don't require a massive budget — just relentless consistency.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+
+        <div class="card">
+          <h3>Zero-Trust API Gateway</h3>
+          <p>Reverse proxy that secures backend services with JWT authentication, custom WAF, and Redis rate limiting. 69 passing tests.</p>
+          <div class="stack"><span>Node.js</span><span>Redis</span><span>JWT</span><span>GitHub Actions</span></div>
+          <div class="links">
+            <a href="https://github.com/felixotieno1011-art/zero-trust-gateway" target="_blank">View on GitHub →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>DevSecOps Honeypot Factory</h3>
+          <p>Infrastructure-as-Code pipeline that spins up a Cowrie SSH honeypot via Ansible and GitHub Actions, traps login attempts, and analyzes the data.</p>
+          <div class="stack"><span>Cowrie</span><span>Ansible</span><span>GitHub Actions</span><span>Docker</span></div>
+          <div class="links">
+            <a href="https://github.com/felixotieno1011-art/honeypot-factory" target="_blank">View on GitHub →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Cloud-Native SIEM</h3>
+          <p>End-to-end SIEM: streams metrics and auth logs over WebSockets, runs real-time detection rules, and visualizes alerts on a React dashboard.</p>
+          <div class="stack"><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>React</span></div>
+          <div class="links">
+            <a href="https://github.com/felixotieno1011-art/cloud-native-siem" target="_blank">View on GitHub →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>FelChat — AI Security Assistant</h3>
+          <p>AI-powered security assistant: live chat, CVE search with pgvector RAG (500 real CVEs), log analyzer, and prompt injection defense.</p>
+          <div class="stack"><span>FastAPI</span><span>PostgreSQL</span><span>pgvector</span><span>Redis</span><span>Groq</span></div>
+          <div class="links">
+            <a href="https://github.com/felixotieno1011-art/felchat" target="_blank">View on GitHub →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Recon Platform</h3>
+          <p>Automated vulnerability scanner with strict scope enforcement via allowlist — refuses targets not explicitly authorized. 24 passing tests.</p>
+          <div class="stack"><span>Starlette</span><span>Redis</span><span>arq</span><span>React</span><span>SQLite</span></div>
+          <div class="links">
+            <a href="https://github.com/felixotieno1011-art/recon-platform" target="_blank">View on GitHub →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact">
+        <div>
+          <div class="label">Email</div>
+          <a href="mailto:felixotieno1011@gmail.com">felixotieno1011@gmail.com</a>
+        </div>
+        <div>
+          <div class="label">Phone / WhatsApp</div>
+          <a href="tel:+254759171471">+254 759 171 471</a>
+        </div>
+        <div>
+          <div class="label">GitHub</div>
+          <a href="https://github.com/felixotieno1011-art" target="_blank">github.com/felixotieno1011-art</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Felix Otieno · Built from scratch on a phone in Termux
+    </footer>
+
+  </div>
+</body>
+</html>
